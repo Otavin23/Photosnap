@@ -10,7 +10,7 @@ const CardStory = ({ title, author, image }: IProps) => {
   return (
     <Box
       as="div"
-      w="100%"
+      w="25%"
       h="450px"
       pos="relative"
       _before={{

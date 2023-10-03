@@ -7,10 +7,11 @@ import {
   Button,
   Flex,
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <Flex as="main" justify="center" h="75px" bg="#fff">
+    <Flex as="header" justify="center" h="75px" bg="#fff">
       <Container
         maxW="1100px"
         w="95%"
@@ -37,7 +38,7 @@ const Header = () => {
             fontSize="14px"
             cursor="pointer"
           >
-            STORIES
+            <Link to="/stories">STORIES</Link>
           </ListItem>
 
           <ListItem
