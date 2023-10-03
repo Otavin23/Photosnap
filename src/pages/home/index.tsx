@@ -1,3 +1,4 @@
+import { Footer } from "../../components/footer";
 import { Header } from "../../components/header";
 import {
   Container,
@@ -13,8 +14,9 @@ const Home = () => {
   return (
     <>
       <Header />
+
       <Flex as="main" w="100%" justify="center">
-        <Container w="100%" m="0 0 10rem 0" p="0" maxW="1500px">
+        <Container w="100%" p="0" maxW="1500px">
           <Flex as="section" justifyContent="space-between" w="100%">
             <Flex
               as="div"
@@ -573,6 +575,8 @@ const Home = () => {
           </Flex>
         </Container>
       </Flex>
+
+      <Footer />
     </>
   );
 };
