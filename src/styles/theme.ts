@@ -10,8 +10,8 @@ const themeChakra = extendTheme({
   },
 
   fonts: {
-    heading: `Kumbh Sans, sans-serif`,
-    body: `Kumbh Sans', sans-serif`,
+    heading: `DM Sans, sans-serif`,
+    body: `DM Sans, sans-serif`,
   },
 
   breakpoint: {
