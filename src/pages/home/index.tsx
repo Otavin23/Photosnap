@@ -14,7 +14,7 @@ const Home = () => {
     <>
       <Header />
       <Flex as="main" w="100%" justify="center">
-        <Container w="100%" m="0" p="0" maxW="1500px">
+        <Container w="100%" m="0 0 10rem 0" p="0" maxW="1500px">
           <Flex as="section" justifyContent="space-between" w="100%">
             <Flex
               as="div"
@@ -224,6 +224,352 @@ const Home = () => {
                 h="100%"
               />
             </Box>
+          </Flex>
+
+          <Flex as="section" justifyContent="space-between">
+            <Box
+              as="div"
+              w="100%"
+              h="450px"
+              pos="relative"
+              _before={{
+                content: `""`,
+                pos: "absolute",
+                bg: "linear-gradient(0deg, rgba(0, 0, 0, 0.66) 0px, transparent);",
+                w: "100%",
+                h: "100%",
+              }}
+            >
+              <Image
+                src="../assets/stories/desktop/mountains.jpg"
+                alt=""
+                w="100%"
+                h="100%"
+              />
+              <Flex
+                pos="absolute"
+                direction="column"
+                bottom="1px"
+                px="3rem"
+                py="2rem"
+                w="100%"
+              >
+                <Heading as="h3" color="#fffd" fontSize="20px">
+                  The Mountain
+                </Heading>
+                <Text
+                  as="span"
+                  color="rgba(217, 217, 217, 0.914)"
+                  fontWeight="700"
+                  my="0rem"
+                  py="0.5rem"
+                  fontSize="14px"
+                  letterSpacing="1px"
+                  borderBottom="0.01rem solid rgba(217, 217, 217, 0.44);"
+                >
+                  by John Apppleseed
+                </Text>
+                <Button
+                  mt="0.5rem"
+                  bg="transparent"
+                  color="#fff"
+                  p="0"
+                  w="100%"
+                  display="flex"
+                  justifyContent="space-between"
+                  fontSize="14px"
+                >
+                  READ STORY
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="43"
+                    height="14"
+                  >
+                    <g fill="none" fill-rule="evenodd" stroke="#ffffff">
+                      <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+                    </g>
+                  </svg>
+                </Button>
+              </Flex>
+            </Box>
+
+            <Box
+              as="div"
+              w="100%"
+              h="450px"
+              pos="relative"
+              _before={{
+                content: `""`,
+                pos: "absolute",
+                bg: "linear-gradient(0deg, rgba(0, 0, 0, 0.66) 0px, transparent);",
+                w: "100%",
+                h: "100%",
+              }}
+            >
+              <Image
+                src="../assets/stories/desktop/cityscapes.jpg"
+                alt=""
+                w="100%"
+                h="100%"
+              />
+
+              <Flex
+                pos="absolute"
+                direction="column"
+                bottom="1px"
+                px="3rem"
+                py="2rem"
+                w="100%"
+              >
+                <Heading as="h3" color="#fffd" fontSize="20px">
+                  Sunset Cityscapes
+                </Heading>
+                <Text
+                  as="span"
+                  color="rgba(217, 217, 217, 0.914)"
+                  fontWeight="700"
+                  my="0rem"
+                  py="0.5rem"
+                  fontSize="14px"
+                  letterSpacing="1px"
+                  borderBottom="0.01rem solid rgba(217, 217, 217, 0.44);"
+                >
+                  by Benjamin Crud
+                </Text>
+                <Button
+                  mt="0.5rem"
+                  bg="transparent"
+                  color="#fff"
+                  p="0"
+                  w="100%"
+                  display="flex"
+                  justifyContent="space-between"
+                  fontSize="14px"
+                >
+                  READ STORY
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="43"
+                    height="14"
+                  >
+                    <g fill="none" fill-rule="evenodd" stroke="#ffffff">
+                      <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+                    </g>
+                  </svg>
+                </Button>
+              </Flex>
+            </Box>
+
+            <Box
+              as="div"
+              w="100%"
+              h="450px"
+              pos="relative"
+              _before={{
+                content: `""`,
+                pos: "absolute",
+                bg: "linear-gradient(0deg, rgba(0, 0, 0, 0.66) 0px, transparent);",
+                w: "100%",
+                h: "100%",
+              }}
+            >
+              <Image
+                src="../assets/stories/desktop/18-days-voyage.jpg"
+                alt=""
+                w="100%"
+                h="100%"
+              />
+              <Flex
+                pos="absolute"
+                direction="column"
+                bottom="1px"
+                px="3rem"
+                py="2rem"
+                w="100%"
+              >
+                <Heading as="h3" color="#fffd" fontSize="20px">
+                  18 Days Voyage
+                </Heading>
+                <Text
+                  as="span"
+                  color="rgba(217, 217, 217, 0.914)"
+                  fontWeight="700"
+                  my="0rem"
+                  py="0.5rem"
+                  fontSize="14px"
+                  letterSpacing="1px"
+                  borderBottom="0.01rem solid rgba(217, 217, 217, 0.44);"
+                >
+                  by Alexei Borodin
+                </Text>
+                <Button
+                  mt="0.5rem"
+                  bg="transparent"
+                  color="#fff"
+                  p="0"
+                  w="100%"
+                  display="flex"
+                  justifyContent="space-between"
+                  fontSize="14px"
+                >
+                  READ STORY
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="43"
+                    height="14"
+                  >
+                    <g fill="none" fill-rule="evenodd" stroke="#ffffff">
+                      <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+                    </g>
+                  </svg>
+                </Button>
+              </Flex>
+            </Box>
+
+            <Box
+              as="div"
+              w="100%"
+              h="450px"
+              pos="relative"
+              _before={{
+                content: `""`,
+                pos: "absolute",
+                bg: "linear-gradient(0deg, rgba(0, 0, 0, 0.66) 0px, transparent);",
+                w: "100%",
+                h: "100%",
+              }}
+            >
+              <Image
+                src="../assets/stories/desktop/architecturals.jpg"
+                alt=""
+                w="100%"
+                h="100%"
+              />
+              <Flex
+                pos="absolute"
+                direction="column"
+                bottom="1px"
+                px="3rem"
+                py="2rem"
+                w="100%"
+              >
+                <Heading as="h3" color="#fffd" fontSize="20px">
+                  Architecturals
+                </Heading>
+                <Text
+                  as="span"
+                  color="rgba(217, 217, 217, 0.914)"
+                  fontWeight="700"
+                  my="0rem"
+                  py="0.5rem"
+                  fontSize="14px"
+                  letterSpacing="1px"
+                  borderBottom="0.01rem solid rgba(217, 217, 217, 0.44);"
+                >
+                  by John Apppleseed
+                </Text>
+                <Button
+                  mt="0.5rem"
+                  bg="transparent"
+                  color="#fff"
+                  p="0"
+                  w="100%"
+                  display="flex"
+                  justifyContent="space-between"
+                  fontSize="14px"
+                >
+                  READ STORY
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="43"
+                    height="14"
+                  >
+                    <g fill="none" fill-rule="evenodd" stroke="#ffffff">
+                      <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+                    </g>
+                  </svg>
+                </Button>
+              </Flex>
+            </Box>
+          </Flex>
+
+          <Flex as="section" justify="center">
+            <Container
+              my="5rem"
+              maxW="1100px"
+              w="95%"
+              display="flex"
+              justifyContent="space-between"
+            >
+              <Flex
+                direction="column"
+                align="center"
+                justify="center"
+                maxW="300px"
+              >
+                <Image
+                  src="https://photosnap-wsl.netlify.app/static/media/responsive.d5fd70c1.svg"
+                  alt=""
+                />
+                <Heading as="h4" mt="2rem" mb="1rem" fontSize="20px">
+                  100% Responsive
+                </Heading>
+                <Text
+                  textAlign="center"
+                  fontSize="14px"
+                  color="rgb(137, 137, 143)"
+                >
+                  No matter which the device you're on, ur site is fully
+                  responsive and sotries look beautiful on any screen.
+                </Text>
+              </Flex>
+
+              <Flex
+                direction="column"
+                align="center"
+                justify="center"
+                maxW="300px"
+              >
+                <Image
+                  src="https://photosnap-wsl.netlify.app/static/media/no-limit.b8deb4d2.svg"
+                  alt=""
+                />
+                <Heading as="h4" mt="3rem" mb="1rem" fontSize="20px">
+                  100% Responsive
+                </Heading>
+                <Text
+                  textAlign="center"
+                  fontSize="14px"
+                  color="rgb(137, 137, 143)"
+                >
+                  No matter which the device you're on, ur site is fully
+                  responsive and sotries look beautiful on any screen.
+                </Text>
+              </Flex>
+
+              <Flex
+                direction="column"
+                align="center"
+                justify="center"
+                maxW="300px"
+              >
+                <Image
+                  src="https://photosnap-wsl.netlify.app/static/media/embed.78c81ce3.svg"
+                  alt=""
+                />
+                <Heading as="h4" mt="2rem" mb="1rem" fontSize="20px">
+                  100% Responsive
+                </Heading>
+                <Text
+                  textAlign="center"
+                  fontSize="14px"
+                  color="rgb(137, 137, 143)"
+                >
+                  No matter which the device you're on, ur site is fully
+                  responsive and sotries look beautiful on any screen.
+                </Text>
+              </Flex>
+            </Container>
           </Flex>
         </Container>
       </Flex>
