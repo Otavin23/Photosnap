@@ -61,7 +61,7 @@ const Header = () => {
             cursor="pointer"
             opacity="0.9"
           >
-            PRICING
+            <Link to="/pricing">PRICING</Link>
           </ListItem>
         </UnorderedList>
 

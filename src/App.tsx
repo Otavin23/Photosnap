@@ -4,6 +4,7 @@ import { Home } from "./pages/home";
 import { themeChakra } from "./styles/theme";
 import { Stories } from "./pages/stories";
 import { Features } from "./pages/features";
+import { Pricing } from "./pages/pricing";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/stories" element={<Stories />} />
             <Route path="/features" element={<Features />} />
+            <Route path="/pricing" element={<Pricing />} />
           </Routes>
         </BrowserRouter>
       </ChakraBaseProvider>

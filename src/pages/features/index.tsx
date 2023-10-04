@@ -1,11 +1,21 @@
 import { Header } from "../../components/header";
-import { Flex, Box, Heading, Text, Image, Container } from "@chakra-ui/react";
+import {
+  Flex,
+  Box,
+  Heading,
+  Text,
+  Image,
+  Container,
+  Button,
+} from "@chakra-ui/react";
 import { CardInfo } from "../../components/cardInfo";
+import { Footer } from "../../components/footer";
 
 const Features = () => {
   return (
     <>
       <Header />
+
       <Flex as="main" justify="center">
         <Container w="100%" p="0" maxW="1500px">
           <Flex as="section" justifyContent="space-between" w="100%">
@@ -54,7 +64,7 @@ const Features = () => {
 
             <Box as="div" bg="#fff" w="100">
               <Image
-                src="../assets/home/desktop/create-and-share.jpg"
+                src="../assets/features/desktop/hero.jpg"
                 alt=""
                 h="100%"
               />
@@ -111,8 +121,57 @@ const Features = () => {
               />
             </Container>
           </Flex>
+
+          <Flex
+            justify="center"
+            bgImage="../assets/shared/desktop/bg-beta.jpg"
+            bgRepeat="no-repeat"
+            bgSize="cover"
+            w="100%"
+            _before={{
+              content: `""`,
+              bg: "linear-gradient(rgb(90, 119, 255), rgb(188, 113, 152), rgb(255, 197, 147))",
+              w: "6px",
+            }}
+          >
+            <Container
+              py="3rem"
+              maxW="1100px"
+              w="95%"
+              display="flex"
+              justifyContent="space-between"
+              alignItems="center"
+            >
+              <Heading color="#fff" maxW="350px" fontSize="45px">
+                WE'RE IN BETA. GET YOUR INVITE TODAY
+              </Heading>
+              <Button
+                display="flex"
+                variant="unstyled"
+                color="#fff"
+                fontSize="14px"
+                fontWeight="600"
+              >
+                GET AN INVITE
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="43"
+                  height="14"
+                  style={{
+                    marginLeft: "1rem",
+                  }}
+                >
+                  <g fill="none" fill-rule="evenodd" stroke="#ffffff">
+                    <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+                  </g>
+                </svg>
+              </Button>
+            </Container>
+          </Flex>
         </Container>
       </Flex>
+
+      <Footer />
     </>
   );
 };

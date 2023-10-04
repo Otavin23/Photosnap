@@ -1,0 +1,64 @@
+
+
+td, th {
+  border-bottom: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th{
+  text-align: center;
+  padding:3rem 0;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 1px;
+  border: none;
+}
+
+td{
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+
+/* chechbox */ 
+
+.input__checkbox {
+  appearance: none;
+  visibility: none;
+  display: none;
+}
+
+.check {
+  position: relative;
+  display: block;
+  width: 70px;
+  height: 35px;
+  background: rgb(198, 198, 198);
+  cursor: pointer;
+  border-radius: 20px;
+  transition: all 1s;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px inset;
+}
+
+
+.check::before {
+  content: "";
+  position: absolute;
+  background:rgb(255, 255, 255);
+  width: 35px;
+  height: 35px;
+  transition: all 0.3s;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 5px;
+}
+
+
+.input__checkbox:checked ~.check::before {
+  right: -1px;
+}
+
+.input__checkbox:checked ~ .check{
+  background: rgb(0, 0, 0);
+}

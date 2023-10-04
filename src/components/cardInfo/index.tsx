@@ -1,4 +1,4 @@
-import { Flex, Image, Heading, Text, Box } from "@chakra-ui/react";
+import { Flex, Image, Heading, Text } from "@chakra-ui/react";
 
 interface IProps {
   image: string;
