@@ -21,7 +21,9 @@ const Header = () => {
         alignItems="center"
       >
         <Box as="div">
-          <Image src="../assets/shared/desktop/logo.svg" alt="" w="170px" />
+          <Link to="/">
+            <Image src="../assets/shared/desktop/logo.svg" alt="" w="170px" />
+          </Link>
         </Box>
 
         <UnorderedList
@@ -49,7 +51,7 @@ const Header = () => {
             fontSize="14px"
             cursor="pointer"
           >
-            FEATURES
+            <Link to="/features">FEATURES</Link>
           </ListItem>
 
           <ListItem
