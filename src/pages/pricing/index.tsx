@@ -10,10 +10,10 @@ import {
 } from "@chakra-ui/react";
 import "../../styles/table.css";
 import { Footer } from "../../components/footer";
-///import { useState } from "react";
+import { useState } from "react";
 
 const Pricing = () => {
-  /// const [check, setCheck] = useState(false);
+  const [check, setCheck] = useState(false);
 
   return (
     <>
@@ -21,14 +21,29 @@ const Pricing = () => {
 
       <Flex as="main" justify="center">
         <Container w="100%" maxW="1500px" p="0">
-          <Flex as="section" justifyContent="space-between" w="100%">
+          <Flex
+            as="section"
+            direction={{
+              base: "column-reverse",
+              lg: "row",
+              md: "row",
+              sm: "column-reverse",
+            }}
+            justifyContent="space-between"
+            w="100%"
+          >
             <Flex
               as="div"
               direction="column"
               justify="center"
               bg="#000"
-              w="48%"
-              px="2.5rem"
+              w={{ base: "100%", lg: "50%", md: "50%", sm: "100%" }}
+              p={{
+                base: "5rem 2rem",
+                lg: "2.5rem",
+                md: "2.5rem",
+                sm: "5rem 2rem",
+              }}
               pos="relative"
             >
               <Box
@@ -46,7 +61,7 @@ const Pricing = () => {
                   as="h1"
                   color="#fff"
                   maxW="400px"
-                  fontSize="41px"
+                  fontSize="clamp(30px, 3vw, 41px)"
                   letterSpacing="5px"
                   lineHeight="52px"
                   fontWeight="700"
@@ -59,6 +74,7 @@ const Pricing = () => {
                   color="rgba(217, 217, 217, 0.624)"
                   maxW="420px"
                 >
+                  We make sure all of our features are designed to be loved by
                   Create a your stories, Photosnap is a platform for
                   photographers and visual storytellers. It’s the simple way to
                   create and share your photos.
@@ -66,8 +82,17 @@ const Pricing = () => {
               </Box>
             </Flex>
 
-            <Box as="div" bg="#fff" w="100">
-              <Image src="../assets/pricing/desktop/hero.jpg" alt="" h="100%" />
+            <Box
+              as="div"
+              bg="#fff"
+              w={{ base: "100%", lg: "50%", md: "50%", sm: "100%" }}
+            >
+              <Image
+                src="../assets/pricing/desktop/hero.jpg"
+                alt=""
+                h="100%"
+                objectFit="cover"
+              />
             </Box>
           </Flex>
 
@@ -85,21 +110,33 @@ const Pricing = () => {
                 align="center"
                 className="label__checkTheme"
               >
-                <Text mr="1rem" fontWeight="700">
+                <Text mr="1rem" fontWeight={check ? "400" : "700"}>
                   Monthly
                 </Text>
                 <input type="checkbox" className="input__checkbox" />
-                <span className="check"></span>
-                <Text ml="1rem">Yearly</Text>
+                <span className="check" onClick={() => setCheck(!check)}></span>
+                <Text ml="1rem" fontWeight={check ? "700" : "400"}>
+                  Yearly
+                </Text>
               </Flex>
 
-              <Flex justify="center" align="center">
+              <Flex
+                justify="center"
+                align="center"
+                direction={{
+                  base: "column",
+                  lg: "row",
+                  md: "column",
+                }}
+              >
                 <Flex
                   direction="column"
                   px="1rem"
                   align="center"
-                  w="35%"
-                  mr="2rem"
+                  w={{ base: "100%", lg: "35%", md: "100%" }}
+                  mr={{ base: "0", lg: "2rem", md: "0", sm: "0" }}
+                  maxW={{ base: "400px", lg: "100%", md: "400px" }}
+                  mt="1rem"
                 >
                   <Heading as="h3">Basic</Heading>
                   <Text textAlign="center" mt="2rem" mb="1rem" opacity="0.7">
@@ -108,10 +145,10 @@ const Pricing = () => {
                   </Text>
 
                   <Text as="span" fontWeight="600" fontSize="30px">
-                    $19.00
+                    ${check ? (19 * 10).toFixed(2) : (19).toFixed(2)}
                   </Text>
                   <Text as="span" fontWeight="600" opacity="0.8">
-                    per month
+                    per {check ? "year" : "month"}
                   </Text>
 
                   <Button
@@ -130,10 +167,12 @@ const Pricing = () => {
                   bg="#000"
                   direction="column"
                   align="center"
-                  w="35%"
+                  w={{ base: "100%", lg: "35%", md: "100%" }}
+                  maxW={{ base: "400px", lg: "100%", md: "400px" }}
                   py="5rem"
                   px="1rem"
-                  mr="2rem"
+                  mr={{ base: "0", lg: "2rem", md: "0", sm: "0" }}
+                  my={{ base: "5rem", lg: "1rem", md: "5rem" }}
                   pos="relative"
                   _before={{
                     content: `""`,
@@ -159,10 +198,10 @@ const Pricing = () => {
                   </Text>
 
                   <Text as="span" color="#fff" fontWeight="600" fontSize="30px">
-                    $39.00
+                    ${check ? (39 * 10).toFixed(2) : (39).toFixed(2)}
                   </Text>
                   <Text as="span" color="#fff" fontWeight="600" opacity="0.8">
-                    per month
+                    per {check ? "year" : "month"}
                   </Text>
 
                   <Button
@@ -177,7 +216,14 @@ const Pricing = () => {
                   </Button>
                 </Flex>
 
-                <Flex direction="column" align="center" w="35%" mr="2rem">
+                <Flex
+                  direction="column"
+                  align="center"
+                  w={{ base: "100%", lg: "35%", md: "100%" }}
+                  maxW={{ base: "400px", lg: "100%", md: "400px" }}
+                  mr={{ base: "0", lg: "2rem", md: "0", sm: "0" }}
+                  mt="1rem"
+                >
                   <Heading as="h3">Business</Heading>
                   <Text textAlign="center" mt="2rem" mb="1rem" opacity="0.7">
                     Additional features available such as more detailed metrics.
@@ -185,10 +231,10 @@ const Pricing = () => {
                   </Text>
 
                   <Text as="span" fontWeight="600" fontSize="30px">
-                    $99.00
+                    ${check ? (99 * 10).toFixed(2) : (99).toFixed(2)}
                   </Text>
                   <Text as="span" fontWeight="600" opacity="0.8">
-                    per month
+                    pear {check ? "year" : "month"}
                   </Text>
 
                   <Button
@@ -558,9 +604,25 @@ const Pricing = () => {
               w="95%"
               display="flex"
               justifyContent="space-between"
+              flexDirection={{
+                base: "column",
+                lg: "row",
+                md: "row",
+                sm: "column",
+              }}
               alignItems="center"
             >
-              <Heading color="#fff" maxW="350px" fontSize="45px">
+              <Heading
+                color="#fff"
+                maxW="350px"
+                fontSize="clamp(35px, 3vw, 45px)"
+                textAlign={{
+                  base: "center",
+                  lg: "start",
+                  md: "start",
+                  sm: "center",
+                }}
+              >
                 WE'RE IN BETA. GET YOUR INVITE TODAY
               </Heading>
               <Button

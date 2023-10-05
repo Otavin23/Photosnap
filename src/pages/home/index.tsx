@@ -10,6 +10,7 @@ import {
   Text,
   Button,
 } from "@chakra-ui/react";
+import { CardInfo } from "../../components/cardInfo";
 
 const Home = () => {
   return (
@@ -18,14 +19,24 @@ const Home = () => {
 
       <Flex as="main" w="100%" justify="center">
         <Container w="100%" p="0" maxW="1500px">
-          <Flex as="section" justifyContent="space-between" w="100%">
+          <Flex
+            as="section"
+            direction={{
+              base: "column-reverse",
+              lg: "row",
+              md: "row",
+              sm: "column-reverse",
+            }}
+            justifyContent="space-between"
+            w="100%"
+          >
             <Flex
               as="div"
               direction="column"
               justify="center"
               bg="#000"
-              w="48%"
-              px="2.5rem"
+              w={{ base: "100%", lg: "50%", md: "50%", sm: "100%" }}
+              p="2.5rem"
               pos="relative"
             >
               <Box
@@ -37,12 +48,13 @@ const Home = () => {
                 borderRadius="0.5rem"
                 bg="linear-gradient(rgb(90, 119, 255), rgb(188, 113, 152), rgb(255, 197, 147))"
               ></Box>
+
               <Box as="div" maxW="90%">
                 <Heading
                   as="h1"
                   color="#fff"
                   maxW="400px"
-                  fontSize="41px"
+                  fontSize="clamp(30px, 3vw, 41px)"
                   letterSpacing="5px"
                   lineHeight="52px"
                   fontWeight="700"
@@ -86,16 +98,31 @@ const Home = () => {
               </Box>
             </Flex>
 
-            <Box as="div" bg="#fff" w="100">
+            <Box
+              as="div"
+              bg="#fff"
+              w={{ base: "100%", lg: "50%", md: "50%", sm: "100%" }}
+            >
               <Image
                 src="../assets/home/desktop/create-and-share.jpg"
                 alt=""
                 h="100%"
+                objectFit="cover"
               />
             </Box>
           </Flex>
 
-          <Flex as="section" justifyContent="space-between" w="100%">
+          <Flex
+            as="section"
+            direction={{
+              base: "column",
+              lg: "row",
+              md: "row",
+              sm: "column",
+            }}
+            justifyContent="space-between"
+            w="100%"
+          >
             <Box as="div" w="100">
               <Image
                 src="../assets/home/desktop/beautiful-stories.jpg"
@@ -108,8 +135,8 @@ const Home = () => {
               as="div"
               direction="column"
               justify="center"
-              w="48%"
-              px="2.5rem"
+              w={{ base: "100%", lg: "50%", md: "50%", sm: "100%" }}
+              p="2.5rem"
               pos="relative"
             >
               <Box as="div" maxW="90%">
@@ -162,13 +189,22 @@ const Home = () => {
             </Flex>
           </Flex>
 
-          <Flex as="section" justifyContent="space-between" w="100%">
+          <Flex
+            as="section"
+            direction={{
+              base: "column-reverse",
+              lg: "row",
+              md: "row",
+              sm: "column-reverse",
+            }}
+            justifyContent="space-between"
+            w="100%"
+          >
             <Flex
               as="div"
               direction="column"
               justify="center"
-              w="48%"
-              px="2.5rem"
+              p="2.5rem"
               pos="relative"
             >
               <Box as="div" maxW="90%">
@@ -229,7 +265,12 @@ const Home = () => {
             </Box>
           </Flex>
 
-          <Flex as="section" justifyContent="space-between">
+          <Flex
+            as="section"
+            justify="space-between"
+            wrap="wrap"
+            transition="all 0.5s"
+          >
             <CardStory
               title="The Mountain"
               author="John Appleseed"
@@ -262,75 +303,37 @@ const Home = () => {
               w="95%"
               display="flex"
               justifyContent="space-between"
+              flexDirection={{
+                base: "column",
+                lg: "row",
+                md: "row",
+                sm: "column",
+              }}
+              alignItems={{
+                base: "center",
+                lg: "normal",
+                md: "normal",
+                sm: "center",
+              }}
             >
-              <Flex
-                direction="column"
-                align="center"
-                justify="center"
-                maxW="300px"
-              >
-                <Image
-                  src="https://photosnap-wsl.netlify.app/static/media/responsive.d5fd70c1.svg"
-                  alt=""
-                />
-                <Heading as="h4" mt="2rem" mb="1rem" fontSize="20px">
-                  100% Responsive
-                </Heading>
-                <Text
-                  textAlign="center"
-                  fontSize="14px"
-                  color="rgb(137, 137, 143)"
-                >
-                  No matter which the device you're on, ur site is fully
-                  responsive and sotries look beautiful on any screen.
-                </Text>
-              </Flex>
+              <CardInfo
+                image="https://photosnap-wsl.netlify.app/static/media/responsive.d5fd70c1.svg"
+                title="100% Responsive"
+                description="No matter which the device you're on, ur site is fully
+                  responsive and sotries look beautiful on any screen."
+              />
 
-              <Flex
-                direction="column"
-                align="center"
-                justify="center"
-                maxW="300px"
-              >
-                <Image
-                  src="https://photosnap-wsl.netlify.app/static/media/no-limit.b8deb4d2.svg"
-                  alt=""
-                />
-                <Heading as="h4" mt="3rem" mb="1rem" fontSize="20px">
-                  100% Responsive
-                </Heading>
-                <Text
-                  textAlign="center"
-                  fontSize="14px"
-                  color="rgb(137, 137, 143)"
-                >
-                  No matter which the device you're on, ur site is fully
-                  responsive and sotries look beautiful on any screen.
-                </Text>
-              </Flex>
+              <CardInfo
+                image="https://photosnap-wsl.netlify.app/static/media/no-limit.b8deb4d2.svg"
+                title="No Photo Upload Limit"
+                description="Our tool has no limits on uploads or bandwidth. Freely upload in bulk and share all of your stories in one go."
+              />
 
-              <Flex
-                direction="column"
-                align="center"
-                justify="center"
-                maxW="300px"
-              >
-                <Image
-                  src="https://photosnap-wsl.netlify.app/static/media/embed.78c81ce3.svg"
-                  alt=""
-                />
-                <Heading as="h4" mt="2rem" mb="1rem" fontSize="20px">
-                  100% Responsive
-                </Heading>
-                <Text
-                  textAlign="center"
-                  fontSize="14px"
-                  color="rgb(137, 137, 143)"
-                >
-                  No matter which the device you're on, ur site is fully
-                  responsive and sotries look beautiful on any screen.
-                </Text>
-              </Flex>
+              <CardInfo
+                image="https://photosnap-wsl.netlify.app/static/media/embed.78c81ce3.svg"
+                title="Available to Embed"
+                description="Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google Maps, and more."
+              />
             </Container>
           </Flex>
         </Container>

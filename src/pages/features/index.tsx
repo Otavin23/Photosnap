@@ -18,14 +18,29 @@ const Features = () => {
 
       <Flex as="main" justify="center">
         <Container w="100%" p="0" maxW="1500px">
-          <Flex as="section" justifyContent="space-between" w="100%">
+          <Flex
+            as="section"
+            direction={{
+              base: "column-reverse",
+              lg: "row",
+              md: "row",
+              sm: "column-reverse",
+            }}
+            justifyContent="space-between"
+            w="100%"
+          >
             <Flex
               as="div"
               direction="column"
               justify="center"
               bg="#000"
-              w="48%"
-              px="2.5rem"
+              w={{ base: "100%", lg: "50%", md: "50%", sm: "100%" }}
+              p={{
+                base: "5rem 2rem",
+                lg: "2.5rem",
+                md: "2.5rem",
+                sm: "5rem 2rem",
+              }}
               pos="relative"
             >
               <Box
@@ -37,12 +52,13 @@ const Features = () => {
                 borderRadius="0.5rem"
                 bg="linear-gradient(rgb(90, 119, 255), rgb(188, 113, 152), rgb(255, 197, 147))"
               ></Box>
+
               <Box as="div" maxW="90%">
                 <Heading
                   as="h1"
                   color="#fff"
                   maxW="400px"
-                  fontSize="41px"
+                  fontSize="clamp(30px, 3vw, 41px)"
                   letterSpacing="5px"
                   lineHeight="52px"
                   fontWeight="700"
@@ -62,11 +78,16 @@ const Features = () => {
               </Box>
             </Flex>
 
-            <Box as="div" bg="#fff" w="100">
+            <Box
+              as="div"
+              bg="#fff"
+              w={{ base: "100%", lg: "50%", md: "50%", sm: "100%" }}
+            >
               <Image
                 src="../assets/features/desktop/hero.jpg"
                 alt=""
                 h="100%"
+                objectFit="cover"
               />
             </Box>
           </Flex>
@@ -77,7 +98,12 @@ const Features = () => {
               maxW="1100px"
               w="95%"
               display="flex"
-              justifyContent="space-between"
+              justifyContent={{
+                base: "center",
+                lg: "space-between",
+                md: "space-between",
+                sm: "center",
+              }}
               flexWrap="wrap"
             >
               <CardInfo
@@ -140,9 +166,25 @@ const Features = () => {
               w="95%"
               display="flex"
               justifyContent="space-between"
+              flexDirection={{
+                base: "column",
+                lg: "row",
+                md: "row",
+                sm: "column",
+              }}
               alignItems="center"
             >
-              <Heading color="#fff" maxW="350px" fontSize="45px">
+              <Heading
+                color="#fff"
+                maxW="350px"
+                fontSize="clamp(35px, 3vw, 45px)"
+                textAlign={{
+                  base: "center",
+                  lg: "start",
+                  md: "start",
+                  sm: "center",
+                }}
+              >
                 WE'RE IN BETA. GET YOUR INVITE TODAY
               </Heading>
               <Button

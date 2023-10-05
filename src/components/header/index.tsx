@@ -8,8 +8,11 @@ import {
   Flex,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Header = () => {
+  const [modal, setModal] = useState(false);
+
   return (
     <Flex as="header" justify="center" h="75px" bg="#fff">
       <Container
@@ -28,7 +31,7 @@ const Header = () => {
 
         <UnorderedList
           m="0"
-          display="flex"
+          display={{ base: "none", lg: "flex", md: "flex", sm: "none" }}
           alignItems="center"
           listStyleType="none"
         >
@@ -66,15 +69,97 @@ const Header = () => {
         </UnorderedList>
 
         <Button
+          display={{ base: "none", lg: "flex", md: "flex", sm: "none" }}
           bg="#000"
           color="#fff"
           fontWeight="600"
           fontSize="14px"
           px="1.4rem"
           letterSpacing="1px"
+          borderRadius="0.1rem"
         >
           GET AN INVITE
         </Button>
+
+        <Box
+          onClick={() => setModal(!modal)}
+          display={{ base: "flex", lg: "none", md: "flex" }}
+        >
+          {modal ? (
+            <>
+              <Image
+                src="../assets/exit.png"
+                alt=""
+                w="40px"
+                cursor="pointer"
+              />
+              <Flex
+                justify="center"
+                bg="#fff"
+                pos="absolute"
+                left="-1px"
+                w="100%"
+                top="60px"
+                px="2.5rem"
+                py="1rem"
+              >
+                <Flex maxW="150px" w="100%" direction="column" align="center">
+                  <UnorderedList
+                    display="flex"
+                    flexDirection="column"
+                    alignItems="center"
+                    m="0"
+                    w="100%"
+                    pb="0.5rem"
+                    listStyleType="none"
+                    borderBottom="2px solid rgb(17, 17, 17, 0.4);"
+                  >
+                    <ListItem
+                      mt="0.5rem"
+                      color="rgb(0, 0, 0)"
+                      fontWeight="600"
+                      fontSize="14px"
+                    >
+                      STORIES
+                    </ListItem>
+                    <ListItem
+                      mt="0.5rem"
+                      color="rgb(0, 0, 0)"
+                      fontWeight="600"
+                      fontSize="14px"
+                    >
+                      FEATURES
+                    </ListItem>
+                    <ListItem
+                      mt="0.5rem"
+                      color="rgb(0, 0, 0)"
+                      fontWeight="600"
+                      fontSize="14px"
+                    >
+                      PRICING
+                    </ListItem>
+                  </UnorderedList>
+
+                  <Button
+                    bg="#000"
+                    color="#fff"
+                    fontWeight="600"
+                    fontSize="14px"
+                    w="100%"
+                    mt="1rem"
+                    px="1.4rem"
+                    letterSpacing="1px"
+                    borderRadius="0.1rem"
+                  >
+                    GET AN INVITE
+                  </Button>
+                </Flex>
+              </Flex>
+            </>
+          ) : (
+            <Image src="../assets/menu.png" alt="" w="25px" cursor="pointer" />
+          )}
+        </Box>
       </Container>
     </Flex>
   );

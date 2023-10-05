@@ -10,9 +10,10 @@ const CardStory = ({ title, author, image }: IProps) => {
   return (
     <Box
       as="div"
-      w="25%"
+      w={{ base: "100%", xl: "25%", lg: "50%", md: "50%", sm: "100%" }}
       h="450px"
       pos="relative"
+      transition="all 0.3s"
       _before={{
         content: `""`,
         pos: "absolute",
@@ -21,7 +22,7 @@ const CardStory = ({ title, author, image }: IProps) => {
         h: "100%",
       }}
     >
-      <Image src={image} alt="" w="100%" h="100%" />
+      <Image src={image} alt="" w="100%" h="100%" objectFit="cover" />
       <Flex
         pos="absolute"
         direction="column"

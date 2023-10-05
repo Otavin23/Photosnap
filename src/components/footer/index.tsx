@@ -14,14 +14,35 @@ const Footer = () => {
       <Container
         display="flex"
         justifyContent="space-between"
+        flexDirection={{
+          base: "column",
+          lg: "row",
+          md: "row",
+          sm: "column",
+        }}
+        alignItems={{
+          base: "center",
+          lg: "normal",
+          md: "normal",
+          sm: "center",
+        }}
         maxW="1500px"
         w="95%"
         h="100%"
         py="4rem"
       >
-        <Flex>
-          <Flex direction="column" justify="space-between">
+        <Flex
+          w={{ base: "100%", lg: "auto", md: "auto", sm: "100%" }}
+          direction={{ base: "column", lg: "row", md: "row", sm: "column" }}
+          alignItems="center"
+        >
+          <Flex
+            direction="column"
+            justify="space-between"
+            align={{ base: "center", lg: "normal", md: "normal", sm: "center" }}
+          >
             <Image src="../assets/shared/desktop/logo-white.svg" alt="" />
+
             <UnorderedList m="4rem 0 0 0" display="flex" listStyleType="none">
               <ListItem mr="1rem">
                 <Image src="../assets/shared/desktop/facebook.svg" alt="" />
@@ -45,7 +66,25 @@ const Footer = () => {
             </UnorderedList>
           </Flex>
 
-          <UnorderedList m="0 0 0 15rem" listStyleType="none">
+          <UnorderedList
+            display={{ bases: "flex", lg: "block", md: "block", sm: "flex" }}
+            justifyContent={{
+              base: "space-between",
+              lg: "start",
+              md: "start",
+              sm: "space-between",
+            }}
+            flexWrap="wrap"
+            m={{
+              base: "2.5rem 0 0 0",
+              lg: "0 0 0 15rem",
+              md: "0 0 0 6rem",
+              sm: "2.5rem 0 0 0",
+            }}
+            maxW="300px"
+            w={{ base: "100%", lg: "auto", md: "auto", sm: "100%" }}
+            listStyleType="none"
+          >
             <ListItem mb="0.3rem" color="#fff" fontWeight="600">
               Home
             </ListItem>
@@ -61,12 +100,26 @@ const Footer = () => {
           </UnorderedList>
         </Flex>
 
-        <Flex direction="column" justify="space-between">
+        <Flex
+          direction="column"
+          justify={{
+            base: "start",
+            lg: "space-between",
+            md: "space-between",
+            sm: "start",
+          }}
+        >
           <Button
             bg="transparent"
             color="#fff"
             display="flex"
-            justifyContent="end"
+            mt={{ base: "3rem", lg: "0", md: "0", sm: "3rem" }}
+            justifyContent={{
+              base: "center",
+              lg: "space-between",
+              md: "space-between",
+              sm: "center",
+            }}
           >
             GET AN INVITE
             <svg
@@ -83,7 +136,11 @@ const Footer = () => {
             </svg>
           </Button>
 
-          <Text as="span" color="rgba(217, 217, 217, 0.537);">
+          <Text
+            as="span"
+            textAlign="center"
+            color="rgba(217, 217, 217, 0.537);"
+          >
             Copyright 2018. All Rights Reserved
           </Text>
         </Flex>

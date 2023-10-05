@@ -18,7 +18,12 @@ const Stories = () => {
             bg="url(../assets/stories/desktop/moon-of-appalacia.jpg)"
             bgRepeat="no-repeat"
             bgSize="cover"
-            p="5rem"
+            p={{
+              base: "5rem 0 5rem 1rem",
+              lg: "5rem",
+              md: "5rem",
+              sm: "3rem",
+            }}
           >
             <Text as="span" color="#fff" letterSpacing="1px">
               LAST MONTH'S FEATURED STORY
