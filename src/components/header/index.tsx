@@ -115,28 +115,33 @@ const Header = () => {
                     borderBottom="2px solid rgb(17, 17, 17, 0.4);"
                   >
                     <ListItem
-                      mt="0.5rem"
-                      color="rgb(0, 0, 0)"
-                      fontWeight="600"
+                      fontWeight="700"
+                      color="#000"
+                      opacity="0.9"
                       fontSize="14px"
+                      cursor="pointer"
                     >
-                      STORIES
+                      <Link to="/stories">STORIES</Link>
                     </ListItem>
+
                     <ListItem
-                      mt="0.5rem"
-                      color="rgb(0, 0, 0)"
-                      fontWeight="600"
+                      fontWeight="700"
+                      color="#000"
+                      opacity="0.9"
                       fontSize="14px"
+                      cursor="pointer"
                     >
-                      FEATURES
+                      <Link to="/features">FEATURES</Link>
                     </ListItem>
+
                     <ListItem
-                      mt="0.5rem"
-                      color="rgb(0, 0, 0)"
-                      fontWeight="600"
+                      fontWeight="700"
+                      color="#000"
                       fontSize="14px"
+                      cursor="pointer"
+                      opacity="0.9"
                     >
-                      PRICING
+                      <Link to="/pricing">PRICING</Link>
                     </ListItem>
                   </UnorderedList>
 
