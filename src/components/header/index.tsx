@@ -120,6 +120,7 @@ const Header = () => {
                       opacity="0.9"
                       fontSize="14px"
                       cursor="pointer"
+                      mt="0.5rem"
                     >
                       <Link to="/stories">STORIES</Link>
                     </ListItem>
@@ -129,6 +130,7 @@ const Header = () => {
                       color="#000"
                       opacity="0.9"
                       fontSize="14px"
+                      mt="0.5rem"
                       cursor="pointer"
                     >
                       <Link to="/features">FEATURES</Link>
@@ -138,6 +140,7 @@ const Header = () => {
                       fontWeight="700"
                       color="#000"
                       fontSize="14px"
+                      mt="0.5rem"
                       cursor="pointer"
                       opacity="0.9"
                     >
