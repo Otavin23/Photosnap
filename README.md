@@ -1,27 +1,57 @@
-# React + TypeScript + Vite
+# Photosnap
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Demo 💻 
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<img src=".github/photosnap.gif" alt="" />
+<hr>
+ 
+## hosted website 
 
-## Expanding the ESLint configuration
+website: https://photosnap-pink.vercel.app/
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 📔 About the Project
 
-- Configure the top-level `parserOptions` property like this:
+Photosnap is a fictional website multi-page for a platform for photographers and visual storytellers that aims to share photographs, tell stories and connect with others in their profession. This project was made as a challenge to test my skills on the frontend and review my knowledge by applying it to a project.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### 🛠 Technologies
+
+<ul>
+   <li>
+      <a href="https://react.dev/">React.js</a>
+   </li>
+    <li>
+      <a href="https://www.typescriptlang.org/">Typescript</a>
+   </li> 
+    <li>
+      <a href="https://reactrouter.com/en/main">React Router</a>
+   </li>    
+   <li>
+      <a href="https://chakra-ui.com/getting-started">Chakra</a>
+   </li>    
+</ul>
+
+<hr>
+
+## 💻 How to run the application
+
+You must have the tools installed: <a href="https://git-scm.com/">Git</a>, <a href="https://nodejs.org/en">Node.js.</a>
+
+<pre>
+   # In the terminal, clone the project:
+   $ git clone https://github.com/Otavin23/Photosnap
+   
+   #Enter in folder
+   $ cd Photosnap
+
+   #Install dependecias
+   $ npm install
+
+   #Starting Project 
+   $ npm run dev   
+
+</pre>
+
+Projeto iniciando em <a href="">localhost:5173</a>
+
